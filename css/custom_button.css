@@ -1,0 +1,158 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    /* Ensure the width is flexible */
+    height: auto;
+    /* Ensure the height is flexible */
+    padding: 5vw 0;
+    overflow: visible;
+}
+
+.cta {
+    display: flex;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: white;
+    background: #018b32;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    pointer-events: all;
+}
+
+.cta:focus {
+    outline: none;
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+.cta span {
+    transform: skewX(15deg)
+}
+
+.cta span:nth-child(2) {
+    width: 1vw;
+    margin-left: 1vw;
+    position: relative;
+    top: 12%;
+}
+
+/**************SVG****************/
+/* Make sure SVG scales */
+
+path.one,
+path.two,
+path.three {
+    width: 100%;
+    height: auto;
+}
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: #FBC638;
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+
+    /* Ensure SVG arrows are always in hover state */
+    path.one,
+    path.two,
+    path.three {
+        transform: translateX(0%);
+        /* Ensure arrows are visible */
+        animation: color_anim 1s infinite;
+        /* Keep arrows animating */
+    }
+
+    .cta {
+        transform: scale(0.8);
+        /* Scale down the entire button proportionally */
+        transform-origin: center;
+        /* Ensure scaling happens from the center */
+        transform: skewX(-15deg);
+    }
+
+    span:nth-child(2) {
+        width: 3vw;
+        margin-left: 2vw;
+        position: relative;
+        top: 12%;
+        width: 15vw;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* Ensure SVG arrows are always in hover state */
+    path.one,
+    path.two,
+    path.three {
+        transform: translateX(0%);
+        /* Ensure arrows are visible */
+        animation: color_anim 1s infinite;
+        /* Keep arrows animating */
+    }
+
+    .cta {
+        transform: scale(.7);
+        /* Further scale down the button */
+        transform-origin: center;
+        /* Ensure scaling happens from the center */
+        transform: skewX(-15deg);
+    }
+}
