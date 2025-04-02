@@ -41,7 +41,7 @@ window.onload = function () {
             lazyLoad: 'progressive'
         });
     }
-    
+
     // $('.hero-carousel').slick({
     //     infinite: true,
     //     slidesToShow: 1,
