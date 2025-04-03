@@ -1,0 +1,109 @@
+.transparent-10 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.transparent-20 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.transparent-30 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.transparent-40 {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.transparent-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.transparent-60 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.transparent-70 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.transparent-80 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.transparent-90 {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.round-edges {
+    border-radius: 2rem;
+}
+
+.readabily-shadow {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-text {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.stroke-text {
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.small-logo {
+    width: 50px;
+    height: auto;
+}
+
+.btn-custom {
+    background-color: #018b32;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #13bb5f;
+    color: white;
+}
+
+/* 
+.framed-logo {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow:
+        0 4px 20px rgba(0, 255, 130, 0.2),
+        0 0 0 2px rgba(255, 255, 255, 0.05) inset;
+} */
+
+.framed-logo {
+    padding: 16px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, #0a0a0a, #1a1a1a);
+    box-shadow:
+        0 0 20px rgba(0, 255, 130, 0.4),
+        inset 0 0 10px rgba(0, 255, 130, 0.1);
+    border: 2px solid rgba(0, 255, 130, 0.3);
+}
+
+.plaque-left {
+    border-radius: 40px 0 0 40px;
+    background-color: #1a1a1a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.plaque-left img {
+    border-radius: 20px;
+}
+
+.plaque-right {
+    border-radius: 0 40px 40px 0;
+    padding: 16px 24px;
+    background-color: rgb(117, 117, 117);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.plaque-right img {
+    border-radius: 12px;
+}
