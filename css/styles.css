@@ -104,6 +104,14 @@ body {
   color: transparent;
 }
 
+.green-gradient-text {
+  background: var(--green-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Apply the animation on page load */
 #southeastresort {
   padding: var(--navbar-padding);
@@ -267,6 +275,47 @@ body {
 /* Section spacing */
 .section {
   padding: 60px 0;
+}
+
+.hotels {
+  display: flex;
+  align-items: stretch;
+}
+
+.single-hotels-item {
+  box-shadow: 0 0px 5px rgba(71, 71, 71, .2);
+  background-color: --var(--bg-color);
+  padding: 10px 10px 10px 10px;
+  border-radius: var(--corner-radius);
+  transition: box-shadow 0.3s ease;
+  will-change: box-shadow;
+}
+
+.single-hotels-item-img {
+  background-color: black;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.single-hotels-item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.single-hotels-item-txt {
+  height: 20vh;
+}
+
+.single-hotels-item-txt a {
+  color: black;
+}
+
+.single-hotels-item-txt h2 {
+  padding: 10px 0;
+}
+
+.single-hotels-item:hover {
+  box-shadow: 0 10px 20px rgba(21, 19, 19, .4);
 }
 
 /* Footer styling */
