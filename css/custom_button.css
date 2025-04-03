@@ -144,7 +144,7 @@ path.two {
     path.three {
         transform: translateX(0%);
         /* Ensure arrows are visible */
-        animation: color_anim 1s infinite;
+        animation: color_anim 3s infinite;
         /* Keep arrows animating */
     }
 

@@ -67,16 +67,6 @@
     color: white;
 }
 
-/* 
-.framed-logo {
-    background: #1a1a1a;
-    border-radius: 16px;
-    padding: 12px;
-    box-shadow:
-        0 4px 20px rgba(0, 255, 130, 0.2),
-        0 0 0 2px rgba(255, 255, 255, 0.05) inset;
-} */
-
 .framed-logo {
     padding: 16px;
     border-radius: 20px;
