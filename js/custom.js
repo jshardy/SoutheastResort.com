@@ -3,6 +3,21 @@
 window.onload = function () {
     "use strict";
 
+    // Shows all other content once Pace.js is done
+    Pace.on('done', function () {
+        const content = document.getElementById('content');
+        const preloader = document.getElementById('preloader');
+
+        if (content) {
+            content.style.opacity = 1; // Make content visible
+        }
+
+        if (preloader) {
+            $('#preloader').fadeOut(); // Hide preloader with fade-out effect
+            preloader.style.opacity = 0; // Hide preloader
+        }
+    });
+
     // Smooth scrolling for anchor links using scrollIntoView
     document.querySelectorAll('a.nav-link').forEach(link => {
         link.addEventListener('click', function (event) {
@@ -14,18 +29,12 @@ window.onload = function () {
                         behavior: 'smooth', // Enables smooth scrolling
                         block: 'start' // Aligns the target to the top of the viewport
                     });
-
-                    // // Optional: Update the URL without triggering a reload
-                    // if (history.pushState && window.location.hash !== this.hash) {
-                    //     history.pushState(null, null, this.hash);
-                    // }
                 }
             }
         });
     });
 
-    // Initialize carousel
-    // Initialize Slick Only When Elements Exist
+    // Initialize Slick carousel for the hero section
     if ($('.hero-carousel').length) {
         $('.hero-carousel').slick({
             infinite: true,
@@ -42,29 +51,33 @@ window.onload = function () {
         });
     }
 
-    if ($('.rooms-carousel').length) {
-        const carousel = $('#rooms-carousel');
-
-        const roomsCarousel = new bootstrap.Carousel(roomsCarouselId, {
-            interval: 3000,
-            touch: true
+    // Initialize Bootstrap carousel for the rooms section
+    const roomsCarousel = document.getElementById('rooms-carousel');
+    if (roomsCarousel) {
+        new bootstrap.Carousel(roomsCarousel, {
+            interval: 2000, // Auto-slide every 2 seconds
+            touch: true // Enable touch gestures
         });
     }
 
+    // Show glowing button when scrolling past the hero section
     const hero = document.getElementById("hero");
     const button = document.querySelector(".glowing-btn-wrapper");
 
-    window.addEventListener("scroll", () => {
-        const heroBottom = hero.getBoundingClientRect().bottom;
-        const halfWindowHeight = window.innerHeight / 2;
+    if (hero && button) {
+        window.addEventListener("scroll", () => {
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            const halfWindowHeight = window.innerHeight / 2;
 
-        if (heroBottom <= halfWindowHeight) {
-            button.classList.add("show");
-        } else {
-            button.classList.remove("show");
-        }
-    });
+            if (heroBottom <= halfWindowHeight) {
+                button.classList.add("show");
+            } else {
+                button.classList.remove("show");
+            }
+        });
+    }
 
+    // Animate glowing button when scrolled to the bottom
     let animated = false;
 
     window.addEventListener("scroll", () => {
@@ -79,10 +92,44 @@ window.onload = function () {
             animated = true;
         }
 
-        // Optional: reset animation when they scroll back up
+        // Reset animation when scrolling back up
         if (!scrolledToBottom && animated) {
             button.classList.remove("animate__hinge");
             animated = false;
         }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+                bootstrapCollapse.hide();
+            }
+        });
+    });
+
+    // Initialize the Map
+    var hotelCoords = [57.05119048303024, -135.3335];
+    var map = L.map('map_dialog').setView(hotelCoords, 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    L.marker(hotelCoords).addTo(map)
+        .bindPopup('Southeast Resort, formerly Westmark Alaska')
+        .openPopup();
+
+    var map1 = L.map('map_dialog', {
+        center: hotelCoords,
+        zoom: 15,
+        dragging: false,
+        zoomControl: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        touchZoom: false,
+        tap: false
     });
 };

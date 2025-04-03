@@ -44,6 +44,10 @@
 			</script> -->
   <!-- <title>Southeast Resort | Luxury Stay at Southeast Resort Hotel | Sitka, Alaska</title> -->
   <title>Southeast Resort - Sitka Alaska Luxury Hotel</title>
+  <!-- PACE.js -->
+  <script data-pace-options='{ "eventLag": false }'
+    src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <link rel="stylesheet" href="/css/loading-bar.css">
   <!-- For Icon bar png -->
   <link rel="shortcut icon" type="image/icon" href="/images/logos/icon.png">
   <!-- Poppins, Playfair, Lato fonts -->
@@ -69,6 +73,8 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
   <!-- Animate.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- leaflet map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/custom_button.css">
@@ -85,363 +91,382 @@
   <!-- <div id="preloader">
     <span class="southeast">Southeast</span><span class="resort">Resort</span>
   </div> -->
+  <div id="preloader">
+    <span class="southeast">Southeast</span><span class="resort">Resort</span>
+  </div>
+  <div id="content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
+        <a class="navbar-brand mx-auto d-block d-lg-none" href="#">
+          <img src="/images/logos/icon.png" alt="Compass Logo"><span class="southeast">Southeast</span><span
+            class="serdivider">|</span><span class="resort">Resort</span>
+        </a>
 
-      <a class="navbar-brand mx-auto d-block d-lg-none" href="#">
-        <img src="/images/logos/icon.png" alt="Compass Logo"><span class="southeast">Southeast</span><span
-          class="serdivider">|</span><span class="resort">Resort</span>
-      </a>
+        <a class="navbar-brand d-none d-lg-block" href="#">
+          <img src="/images/logos/icon.png" alt="Compass Logo"><span class="southeast">Southeast</span><span
+            class="serdivider">|</span><span class="resort">Resort</span>
+        </a>
 
-      <a class="navbar-brand d-none d-lg-block" href="#">
-        <img src="/images/logos/icon.png" alt="Compass Logo"><span class="southeast">Southeast</span><span
-          class="serdivider">|</span><span class="resort">Resort</span>
-      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-nowrap">
+            <li class="nav-item"><a class="nav-link active fs-4 fs-md-6" href="#restaurant">Restaurant</a></li>
+            <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#sights">Sights</a></li>
+            <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#map">Map</a></li>
+            <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#hotels">Hotels</a></li>
+            <li class="nav-item">
+              <a href="tel:1907-747-6241" class="nav-link fs-4 fs-md-6">
+                <span class="material-symbols-outlined nav-phone">phone</span>907-747-6241
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-nowrap">
-          <li class="nav-item"><a class="nav-link active fs-4 fs-md-6" href="#restaurant">Restaurant</a></li>
-          <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#sights">Sights</a></li>
-          <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#rooms">Rooms</a></li>
-          <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#reviews">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link fs-4 fs-md-6" href="#hotels">Hotels</a></li>
-          <li class="nav-item">
-            <a href="tel:1907-747-6241" class="nav-link fs-4 fs-md-6">
-              <span class="material-symbols-outlined nav-phone">phone</span>907-747-6241
-            </a>
-          </li>
-        </ul>
+    <!-- Hero Carousel -->
+    <section id="hero" class="section pt-0">
+      <div class="hero-carousel">
+        <div>
+          <img src="/images/hero/banner1.webp" alt="Slide 1">
+        </div>
+        <div>
+          <img src="/images/hero/banner2.webp" alt="Slide 2">
+        </div>
+        <div>
+          <img src="/images/hero/banner3.webp" alt="Slide 3">
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- Hero Carousel -->
-  <section id="hero" class="section pt-0">
-    <div class="hero-carousel">
-      <div>
-        <img src="/images/hero/banner1.webp" alt="Slide 1">
-      </div>
-      <div>
-        <img src="/images/hero/banner2.webp" alt="Slide 2">
-      </div>
-      <div>
-        <img src="/images/hero/banner3.webp" alt="Slide 3">
-      </div>
-    </div>
-    <div class="hero-overlay">
-      <div class="hero-txt">
-        <h1 class="glowing-gold-text">EXPLORE<br>DISCOVER SITKA - ALASKA!</h1>
-        <p class="glowing-underline">Experience the unmatched charm of Sitka, Alaska. Your
-          ultimate destination for fishing adventures and unforgettable tours.</p>
-      </div>
-      <div class="hero-button-container">
-        <!-- <button class="hero-button"
+      <div class="hero-overlay">
+        <div class="hero-txt">
+          <h1 class="glowing-gold-text">EXPLORE<br>DISCOVER SITKA - ALASKA!</h1>
+          <p class="glowing-underline">Experience the unmatched charm of Sitka, Alaska. Your
+            ultimate destination for fishing adventures and unforgettable tours.</p>
+        </div>
+        <div class="hero-button-container">
+          <!-- <button class="hero-button"
           onclick="window.location.href='https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754'">
           Book Now<span class="material-symbols-outlined">credit_card</span>
         </button> -->
-        <div class="wrapper">
-          <a class="cta"
-            href="https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754">
-            <span class="book-text">BOOK NOW</span>
-            <span>
-              <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <path class="one"
-                    d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
-                    fill="#FFFFFF"></path>
-                  <path class="two"
-                    d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
-                    fill="#FFFFFF"></path>
-                  <path class="three"
-                    d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
-                    fill="#FFFFFF"></path>
-                </g>
-              </svg>
-            </span>
-          </a>
+          <div class="wrapper">
+            <a class="cta"
+              href="https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754">
+              <span class="book-text">BOOK NOW</span>
+              <span class="arrow">
+                <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path class="one"
+                      d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                      fill="#FFFFFF"></path>
+                    <path class="two"
+                      d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                      fill="#FFFFFF"></path>
+                    <path class="three"
+                      d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                      fill="#FFFFFF"></path>
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+    </section>
+    <!-- Hero Carousel End -->
+
+    <!-- About Section -->
+    <section id="about" class="section pt-0">
+      <div class="container">
+        <div class="row align-items-stretch justify-content-center">
+          <div class="col-auto plaque-left d-flex align-items-center justify-content-center rounded-on-desktop py-5">
+            <img src="/images/logos/marquee_alpha_small.png" alt="Southeast Resort Island Logo" class="img-fluid">
+          </div>
+          <div class="plaque-right col-md-6 fs-5 rounded-on-desktop">
+            <h2 class="text-uppercase text-center py-2 stroke-text fw-bold">
+              <img class="small-logo" src="/images/logos/icon.png" alt="Compass Logo">
+              <span class="southeast">Southeast</span><span class="serdivider">|</span><span
+                class="resort">Resort</span>
+            </h2>
+            <p>
+              Overlooking Sitka Harbor and Crescent Bay, our newly renovated hotel is the perfect place to bring the
+              family together. Whether you're here to relax or explore, Sitka has it all: fishing, kayaking, hiking,
+              golf,
+              and stunning scenery everywhere you turn.
+              Step out the front door and you're just minutes from historic sights, unique shops, and great restaurants.
+              Whatever you're into, you'll find something to love in this unforgettable town. We’re glad you’re here.
+              Enjoy your stay at the Sitka Hotel.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Hero Carousel End -->
+    </section>
+    <!-- Rooms Section -->
 
-  <!-- About Section -->
-  <section id="about" class="section pt-0">
-    <div class="container">
-      <div class="row align-items-stretch justify-content-center">
-        <div class="col-auto plaque-left d-flex align-items-center justify-content-end rounded-on-desktop">
-          <img src="/images/logos/marquee_alpha_small.png" alt="Southeast Resort Island Logo" class="img-fluid">
-        </div>
-        <div class="plaque-right col-md-6 fs-5 rounded-on-desktop">
-          <h2 class="text-uppercase text-center py-2 stroke-text fw-bold">
-            <img class="small-logo" src="/images/logos/icon.png" alt="Compass Logo">
-            <span class="southeast">Southeast</span><span class="serdivider">|</span><span class="resort">Resort</span>
-          </h2>
-          <p>
-            Overlooking Sitka Harbor and Crescent Bay, our newly renovated hotel is the perfect place to bring the
-            family together. Whether you're here to relax or explore, Sitka has it all: fishing, kayaking, hiking, golf,
-            and stunning scenery everywhere you turn.
-            Step out the front door and you're just minutes from historic sights, unique shops, and great restaurants.
-            Whatever you're into, you'll find something to love in this unforgettable town. We’re glad you’re here.
-            Enjoy your stay at the Sitka Hotel.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Rooms Section -->
-
-  <!-- Rooms Section -->
-  <section id="rooms" class="section pt-0">
-    <h2 class=" text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Rooms & Suites</h2>
-    <p class="text-center text-mutedcol-md-6 fs-5">
-      Experience the perfect blend of comfort and luxury in our newly renovated rooms and suites. Each room is
-      designed to provide a relaxing retreat after a day of adventure in Sitka.
-    </p>
-    <div id="rooms-carousel" class="carousel slide px-5" data-bs-ride="carousel" data-bs-theme="dark">
-      <div class="carousel-inner rounded">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="/images/rooms/1.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="/images/rooms/2.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/rooms/3.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/images/rooms/4.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="/images/rooms/5.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/rooms/6.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/images/rooms/7.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="/images/rooms/8.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/rooms/9.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/rooms/10.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/rooms/11.webp" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/images/rooms/12.webp" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#rooms-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#rooms-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>
-
-  <!-- Sights Section -->
-  <section id="sights" class="section pt-0">
-    <div class="container py-2 col-md-6 fs-5">
-      <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Top Sights to See in Sitka,
-        Alaska</h2>
+    <!-- Rooms Section -->
+    <section id="rooms" class="section pt-0">
+      <h2 class=" text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Rooms & Suites</h2>
       <p class="text-center text-mutedcol-md-6 fs-5">
-        Discover the rich history, natural beauty, and unique wildlife that make Sitka a must-visit destination. These
-        hand-picked locations showcase the best of what our charming coastal town has to offer.
+        Experience the perfect blend of comfort and luxury in our newly renovated rooms and suites. Each room is
+        designed to provide a relaxing retreat after a day of adventure in Sitka.
       </p>
-    </div>
-    <div class="container col-md-6 fs-5">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/nps.jpg" class="card-img-top" alt="Sitka National Historical Park">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Sitka National Historical Park</h5>
-              <p class="card-text">Explore Alaska's oldest national park, featuring totem poles and rich cultural
-                history.</p>
-              <a href="https://www.nps.gov/sitk/index.htm" class="btn btn-primary btn-custom" target="_blank">Learn
-                More</a>
-            </div>
+      <div id="rooms-carousel" class="carousel slide px-5" data-bs-ride="carousel" data-bs-theme="dark">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/images/rooms/1.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/rooms/2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rooms/3.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="/images/rooms/4.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/rooms/5.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rooms/6.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="/images/rooms/7.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/rooms/8.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rooms/9.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rooms/10.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/rooms/11.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="/images/rooms/12.webp" class="d-block w-100" alt="...">
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/AlaskaRaptorCenter-logo.png" class="card-img-top" alt="Alaska Raptor Center">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Alaska Raptor Center</h5>
-              <p class=" card-text">Visit this rehabilitation center for injured birds of prey, including bald eagles.
-              </p>
-              <a href="https://alaskaraptor.org/" class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#rooms-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#rooms-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sights Section -->
+    <section id="sights" class="section pt-0">
+      <div class="container py-2 col-md-6 fs-5">
+        <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Top Sights to See in Sitka,
+          Alaska</h2>
+        <p class="text-center text-mutedcol-md-6 fs-5">
+          Discover the rich history, natural beauty, and unique wildlife that make Sitka a must-visit destination. These
+          hand-picked locations showcase the best of what our charming coastal town has to offer.
+        </p>
+      </div>
+      <div class="container col-md-6 fs-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/nps.jpg" class="card-img-top" alt="Sitka National Historical Park">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Sitka National Historical Park</h5>
+                <p class="card-text">Explore Alaska's oldest national park, featuring totem poles and rich cultural
+                  history.</p>
+                <a href="https://www.nps.gov/sitk/index.htm" class="btn btn-primary btn-custom" target="_blank">Learn
+                  More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/FotB-Logotype-550.jpg" class="card-img-top" alt="Fortress of the Bear">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Fortress of the Bear</h5>
-              <p class="card-text">Observe rescued bears in a naturalized habitat at this unique sanctuary.</p>
-              <a href="https://fortressofthebear.org/" class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/AlaskaRaptorCenter-logo.png" class="card-img-top" alt="Alaska Raptor Center">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Alaska Raptor Center</h5>
+                <p class=" card-text">Visit this rehabilitation center for injured birds of prey, including bald eagles.
+                </p>
+                <a href="https://alaskaraptor.org/" class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/sitka-sound-science-center.svg" class="card-img-top"
-              alt="Sitka Sound Science Center">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Sitka Sound Science Center</h5>
-              <p class="card-text">Engage with local marine life exhibits and learn about regional research.</p>
-              <a href="https://sitkascience.org/" class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/FotB-Logotype-550.jpg" class="card-img-top" alt="Fortress of the Bear">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Fortress of the Bear</h5>
+                <p class="card-text">Observe rescued bears in a naturalized habitat at this unique sanctuary.</p>
+                <a href="https://fortressofthebear.org/" class="btn btn-primary btn-custom" target="_blank">Learn
+                  More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/Russian-Bishops-House.webp" class="card-img-top" alt="Russian Bishop's House">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Russian Bishop's House</h5>
-              <p class="card-text">Tour one of the few surviving examples of Russian colonial architecture in North
-                America.</p>
-              <a href="https://www.nps.gov/sitk/learn/historyculture/russian-bishop-s-house.htm"
-                class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/sitka-sound-science-center.svg" class="card-img-top"
+                alt="Sitka Sound Science Center">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Sitka Sound Science Center</h5>
+                <p class="card-text">Engage with local marine life exhibits and learn about regional research.</p>
+                <a href="https://sitkascience.org/" class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/Saint-Michaels-Cathedral.png" class="card-img-top" alt="St. Michael's Cathedral">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">St. Michael's Cathedral</h5>
-              <p class="card-text">Visit this historic Russian Orthodox cathedral, a symbol of Sitka's heritage.</p>
-              <a href="https://www.stmichaelcathedral.org/" class="btn btn-primary btn-custom" target="_blank">Learn
-                More</a>
+          <!-- Card 5 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/Russian-Bishops-House.webp" class="card-img-top" alt="Russian Bishop's House">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Russian Bishop's House</h5>
+                <p class="card-text">Tour one of the few surviving examples of Russian colonial architecture in North
+                  America.</p>
+                <a href="https://www.nps.gov/sitk/learn/historyculture/russian-bishop-s-house.htm"
+                  class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 7 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/Sheldon-Jackson-Museum.jpg" class="card-img-top" alt="Sheldon Jackson Museum">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Sheldon Jackson Museum</h5>
-              <p class="card-text">Discover a vast collection of Alaska Native artifacts and art.</p>
-              <a href="https://museums.alaska.gov/sheldon_jackson/sjhome.html" class="btn btn-primary btn-custom"
-                target="_blank">Learn More</a>
+          <!-- Card 6 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/Saint-Michaels-Cathedral.png" class="card-img-top" alt="St. Michael's Cathedral">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">St. Michael's Cathedral</h5>
+                <p class="card-text">Visit this historic Russian Orthodox cathedral, a symbol of Sitka's heritage.</p>
+                <a href="https://www.stmichaelcathedral.org/" class="btn btn-primary btn-custom" target="_blank">Learn
+                  More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/Harbor-Mountain-Trail.jpg" class="card-img-top" alt="Harbor Mountain Trail">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Harbor Mountain Trail</h5>
-              <p class="card-text">Hike this trail for panoramic views of Sitka Sound and surrounding islands.</p>
-              <a href="https://www.alaska.org/detail/harbor-mountain-trail" class="btn btn-primary btn-custom"
-                target="_blank">Learn More</a>
+          <!-- Card 7 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/Sheldon-Jackson-Museum.jpg" class="card-img-top" alt="Sheldon Jackson Museum">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Sheldon Jackson Museum</h5>
+                <p class="card-text">Discover a vast collection of Alaska Native artifacts and art.</p>
+                <a href="https://museums.alaska.gov/sheldon_jackson/sjhome.html" class="btn btn-primary btn-custom"
+                  target="_blank">Learn More</a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Card 9 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="images/sights/Starrigavan_estuary_lg.jpg" class="card-img-top" alt="Starrigavan Recreation Area">
-            <div class="card-body">
-              <h5 class="card-title shadow-text text-uppercase">Starrigavan Recreation Area</h5>
-              <p class="card-text">Enjoy bird watching, hiking, and camping in this scenic area.</p>
-              <a href="https://www.fs.usda.gov/recarea/tongass/recarea/?recid=78642" class="btn btn-primary btn-custom"
-                target="_blank">Learn More</a>
+          <!-- Card 8 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/Harbor-Mountain-Trail.jpg" class="card-img-top" alt="Harbor Mountain Trail">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Harbor Mountain Trail</h5>
+                <p class="card-text">Hike this trail for panoramic views of Sitka Sound and surrounding islands.</p>
+                <a href="https://www.alaska.org/detail/harbor-mountain-trail" class="btn btn-primary btn-custom"
+                  target="_blank">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/sights/Starrigavan_estuary_lg.jpg" class="card-img-top"
+                alt="Starrigavan Recreation Area">
+              <div class="card-body">
+                <h5 class="card-title shadow-text text-uppercase">Starrigavan Recreation Area</h5>
+                <p class="card-text">Enjoy bird watching, hiking, and camping in this scenic area.</p>
+                <a href="https://www.fs.usda.gov/recarea/tongass/recarea/?recid=78642"
+                  class="btn btn-primary btn-custom" target="_blank">Learn More</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="map" class="map">
+      <div class="container">
+        <h2 class=" text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Map</h2>
+        <div id="map_dialog" aria-label="Map of Southeast Resort">
+        </div>
+        <div>
+          <p class="text-danger text-center text-bold">Todo add the other 2 hotels to map</p>
+        </div>
+      </div>
+    </section>
 
 
-  <section id="hotels" class="section pt-4">
-    <div class="container col-md-6 fs-5 pb-0">
-      <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Find Your Perfect Escape – Three
-        Hotels, One Incredible Destination!</h2>
-      <p class="text-center text-mutedcol-md-6 fs-5">
-        Always a place to stay! Book your stay at one of our three hotels in Sitka, Alaska. Each hotel offers a unique
-        experience.
-      </p>
-    </div>
-    <div class="container my-3">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div id="serhotels" class="image-card shadow-hover overflow-hidden rounded">
-            <a href="https://secure.webrez.com/hotel/3754/?nextcommand=roomsearch">
-              <img src="/images/hotel_logos/marquee_alpha_square_300x300.webp" class="card-img-custom rounded"
-                alt="Southeast Resort Logo">
-            </a>
+    <section id="hotels" class="section pt-4">
+      <div class="container col-md-6 fs-5 pb-0">
+        <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Find Your Perfect Escape – Three
+          Hotels, One Incredible Destination!</h2>
+        <p class="text-center text-mutedcol-md-6 fs-5">
+          Always a place to stay! Book your stay at one of our three hotels in Sitka, Alaska. Each hotel offers a unique
+          experience.
+        </p>
+      </div>
+      <div class="container my-3">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div id="serhotels" class="image-card shadow-hover overflow-hidden rounded">
+              <a href="https://secure.webrez.com/hotel/3754/?nextcommand=roomsearch">
+                <img src="/images/hotel_logos/marquee_alpha_square_300x300.webp" class="card-img-custom rounded"
+                  alt="Southeast Resort Logo">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div id="sitkahotel" class="image-card shadow-hover overflow-hidden rounded">
-            <a href="https://secure.webrez.com/hotel/1880/?nextcommand=roomsearch">
-              <img src="/images/hotel_logos/sitka_hotel_logo_300x300.webp" class="card-img-custom rounded invert-img"
-                alt="Sitka Hotel Logo">
-            </a>
+          <div class="col-md-4">
+            <div id="sitkahotel" class="image-card shadow-hover overflow-hidden rounded">
+              <a href="https://secure.webrez.com/hotel/1880/?nextcommand=roomsearch">
+                <img src="/images/hotel_logos/sitka_hotel_logo_300x300.webp" class="card-img-custom rounded invert-img"
+                  alt="Sitka Hotel Logo">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div id="baranofhotel" class="image-card shadow-hover overflow-hidden rounded">
-            <a href="https://secure.webrez.com/hotel/3471/?nextcommand=roomsearch">
-              <img src="/images/hotel_logos/baranof_lodge_logo.png" class="card-img-custom rounded"
-                alt="Baranof Lodge Logo">
-            </a>
+          <div class="col-md-4">
+            <div id="baranofhotel" class="image-card shadow-hover overflow-hidden rounded">
+              <a href="https://secure.webrez.com/hotel/3471/?nextcommand=roomsearch">
+                <img src="/images/hotel_logos/baranof_lodge_logo.png" class="card-img-custom rounded"
+                  alt="Baranof Lodge Logo">
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="glowing-btn-wrapper  hidden">
-    <div class="glowing-btn-area">
-      <button class='glowing-btn'
-        onclick="window.location.href='https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754'"><span
-          class='glowing-txt'>B<span class='faulty-letter'>O</span>OK
-          N<span class="faulty-letter">O</span>W</span></button>
+    <div class="glowing-btn-wrapper  hidden">
+      <div class="glowing-btn-area">
+        <button class='glowing-btn'
+          onclick="window.location.href='https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754'"><span
+            class='glowing-txt'>B<span class='faulty-letter'>O</span>OK
+            N<span class="faulty-letter">O</span>W</span></button>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <div class="container">
+        <p>&copy; 2025 Southeast Resort. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
-
-  <!-- Footer -->
-  <footer class="text-center py-4">
-    <div class="container">
-      <p>&copy; 2025 Southeast Resort. All rights reserved.</p>
-    </div>
-  </footer>
-
   <!-- jQuery (required by SlickJS) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Slick JS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--maps-->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <!-- Custom JS -->
   <script src="/js/custom.js"></script>
 </body>

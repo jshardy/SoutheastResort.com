@@ -16,6 +16,23 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+#content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+#preloader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  font-family: 'Victor Mono', 'Poppins', monospace;
+  font-size: clamp(1rem, 4vw, 3rem);
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Navbar styling */
 .navbar {
   background-color: #fff;
@@ -276,6 +293,18 @@ body {
 .section {
   padding: 60px 0;
 }
+
+#map_dialog {
+  height: 400px;
+  width: 100%;
+  max-width: 1080px;
+  /* Optional, to constrain it */
+  margin: 0 auto;
+  /* Optional, centers it */
+  border-radius: 8px;
+  /* Optional styling */
+}
+
 
 /* Footer styling */
 footer {
