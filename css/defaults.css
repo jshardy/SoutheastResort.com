@@ -102,7 +102,7 @@
     width: auto;
     transition: box-shadow 0.3s ease;
     padding: 10px 10px 10px 10px;
-    filter: grayscale(40%);
+    filter: grayscale(60%);
 }
 
 .image-card:hover {
@@ -127,7 +127,7 @@
     transition: filter 0.3s ease;
 }
 
-#serhotels>img {
+#serhotels>a>img {
     background-color: #1a1a1a;
     padding: 10px 10px 10px 10px;
 }
