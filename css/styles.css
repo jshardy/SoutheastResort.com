@@ -34,28 +34,29 @@ body {
 }
 
 /* Navbar styling */
-.navbar {
-  background-color: #fff;
-}
-
 .navbar ul>li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px clamp(12px, 1.2vw, 20px);
-  font-weight: 900;
+  padding: 10px clamp(0.1rem, .5rem, .7rem);
+  font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.navbar ul>li:hover {
+  background: var(--black-gradient-hover);
+  font-weight: 600;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .navbar ul>li>a {
   color: #859098;
-  font-size: clamp(12px, 1vw, 18px);
-  font-weight: 500;
-  text-transform: uppercase;
   text-align: center;
-  /* Ensure text inside the link is centered */
   display: inline-block;
-  /* Ensure proper alignment */
 }
 
 .navbar-brand {
@@ -75,10 +76,6 @@ body {
   margin-right: 10px;
   width: clamp(40px, 4vw, 50px);
   height: auto;
-}
-
-.navbar ul>li {
-  padding: 10px clamp(10px, 1vw, 20px);
 }
 
 .nav-phone {
@@ -135,7 +132,6 @@ body {
 }
 
 /* Hero carousel images */
-
 .hero-carousel img {
   width: 80%;
   max-width: 1920px;
