@@ -24,9 +24,7 @@
     transform: skewX(-15deg);
     pointer-events: all;
     position: relative;
-    /* Ensure arrows are positioned relative to the button */
     overflow: hidden;
-    /* Prevent arrows from overflowing the button */
 }
 
 .cta:focus {

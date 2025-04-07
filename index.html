@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <!-- ADD MORE SEO -->
-  <meta name="description"
-    content="Experience the unmatched charm of Sitka, Alaska—your ultimate destination for fishing adventures and unforgettable tours.">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <!-- <meta name="description" content="Experience luxury at Southeast Resort Hotel in Sitka, Alaska. Stunning ocean views, premium amenities, and top-tier hospitality. Book now! Formerly Westmark Sitka Hotel.">
-		<script type="application/ld+json">
+  <meta name="description"
+    content="Discover Southeast Resort Hotel in Sitka, Alaska – formerly Westmark Sitka. Enjoy stunning ocean views, luxury rooms, and Alaskan hospitality. Book your stay now!">
+  <meta name="keywords"
+    content="Sitka Alaska hotel, Southeast Resort, Westmark Sitka, Aspen hotel, oceanfront hotel Alaska, luxury hotel Sitka, book hotel Sitka, book hotel Alaska">
+
+  <script type="application/ld+json">
 			{
 			  "@context": "https://schema.org",
 			  "@type": "Hotel",
 			  "name": "Southeast Resort",
 			  "image": "assets/images/hotel/southeastresort_lobby.jpg",
-			  "description": "Experience luxury at Southeast Resort Hotel in Sitka, Alaska. Stunning ocean views, premium amenities, and top-tier hospitality.",
+			  "description": "Experience luxury at Southeast Resort Hotel in Sitka, Alaska. Stunning ocean views, premium amenities, and top-tier hospitality. (Formerly Westarmark Sitka Hotel).",
 			  "address": {
 				"@type": "PostalAddress",
 				"streetAddress": "330 Seward St",
@@ -41,12 +43,22 @@
 				}
 			  ]
 			}
-			</script> -->
+			</script>
+
+  <meta property="og:title" content="Southeast Resort Hotel – Sitka, Alaska">
+  <meta property="og:description"
+    content="Book your luxury oceanfront stay at Southeast Resort, formerly Westmark Sitka.">
+  <meta property="og:image" content="https://SoutheastResort.com/images/logos/marquee_alpha_square_300x300_black.webp">
+  <meta property="og:url" content="https://SoutheastResort.com/">
+  <meta property="og:type" content="website">
+
   <!-- <title>Southeast Resort | Luxury Stay at Southeast Resort Hotel | Sitka, Alaska</title> -->
-  <title>Southeast Resort - Sitka Alaska Luxury Hotel</title>
+  <title>Southeast Resort Sitka | Oceanfront Hotel in Alaska | Formerly Westmark</title>
   <!-- PACE.js -->
   <script data-pace-options='{ "eventLag": false }'
     src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://SoutheastResort.com/">
   <link rel="stylesheet" href="/css/loading-bar.css">
   <!-- For Icon bar png -->
   <link rel="shortcut icon" type="image/icon" href="/images/logos/icon.png">
@@ -420,18 +432,15 @@
       </div>
     </section>
 
-    <section id="map" class="map">
+    <section id="map" class="map section">
       <div class="container">
-        <h2 class=" text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Map</h2>
+        <h2 class="text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Map</h2>
         <div id="map_dialog" aria-label="Map of Southeast Resort">
-        </div>
-        <div>
-          <p class="text-danger text-center text-bold">Todo add the other 2 hotels to map</p>
         </div>
       </div>
     </section>
 
-
+    <!-- Hotels Sec -->
     <section id="hotels" class="section pt-4">
       <div class="container col-md-6 fs-5 pb-0">
         <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Find Your Perfect Escape – Three
@@ -444,7 +453,7 @@
       <div class="container my-3">
         <div class="row g-4">
           <div class="col-md-4">
-            <div id="serhotels" class="image-card">
+            <div id="serhotels" class="hotel-card">
               <a href="https://secure.webrez.com/hotel/3754/?nextcommand=roomsearch">
                 <img src="/images/hotel_logos/marquee_alpha_square_300x300.webp" class="card-img-custom rounded"
                   alt="Southeast Resort Logo">
@@ -452,7 +461,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div id="sitkahotel" class="image-card">
+            <div id="sitkahotel" class="hotel-card">
               <a href="https://secure.webrez.com/hotel/1880/?nextcommand=roomsearch">
                 <img src="/images/hotel_logos/sitka_hotel_logo_300x300.webp" class="card-img-custom rounded invert-img"
                   alt="Sitka Hotel Logo">
@@ -460,7 +469,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div id="baranofhotel" class="image-card">
+            <div id="baranofhotel" class="hotel-card">
               <a href="https://secure.webrez.com/hotel/3471/?nextcommand=roomsearch">
                 <img src="/images/hotel_logos/baranof_lodge_logo.png" class="card-img-custom rounded"
                   alt="Baranof Lodge Logo">
@@ -470,6 +479,7 @@
         </div>
       </div>
     </section>
+    <!-- End of Hotels  -->
 
     <div class="glowing-btn-wrapper  hidden">
       <div class="glowing-btn-area">

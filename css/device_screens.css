@@ -72,4 +72,60 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 768px) {}
+@media (orientation: landscape) and (max-width: 768px) {
+
+    /* Center all sections in landscape mode */
+    .section {
+        padding: 20px 15px;
+        margin: 0 auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Ensure containers are centered */
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+
+    /* Fix hero section */
+    #hero .hero-carousel img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Center text elements */
+    h1,
+    h2,
+    h3,
+    p {
+        text-align: center;
+    }
+
+    /* Adjust row spacing */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    /* Ensure columns are properly sized */
+    .col,
+    .col-md-4,
+    .col-md-6 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Fix button alignment */
+    .hero-button-container,
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+}

@@ -109,23 +109,6 @@ window.onload = function () {
         });
     });
 
-    const images = document.querySelectorAll('.image-card');
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                obs.unobserve(entry.target); // 🔥 stop watching once it's visible
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    images.forEach(img => observer.observe(img));
-
-    images.forEach(img => observer.observe(img));
-
     // Initialize the Map
     var hotelCoords = [57.05119048303024, -135.3335];
     var map = L.map('map_dialog').setView(hotelCoords, 15);
