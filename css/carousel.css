@@ -8,6 +8,7 @@
 /* Rooms carousel specific styling */
 #rooms-carousel {
     max-height: 80vh;
+    max-width: 1920px;
     /* Limit height to 80% of viewport height */
     margin: 0 auto;
     overflow: hidden;

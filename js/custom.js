@@ -149,4 +149,43 @@ window.onload = function () {
     L.marker(hotelCoords).addTo(map)
         .bindPopup('Southeast Resort, formerly Westmark Alaska')
         .openPopup();
+
+    // Handle grayscale elements on touch devices
+    // This will make elements transition to full color when they enter the viewport
+    const grayscaleElements = document.querySelectorAll('.image-card, .hotel-card');
+
+    // Check if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice && grayscaleElements.length > 0) {
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // When element enters viewport
+                if (entry.isIntersecting) {
+                    // Add a small delay for a more natural feel
+                    setTimeout(() => {
+                        entry.target.classList.add('in-view');
+                    }, 100);
+                } else {
+                    // When element leaves viewport
+                    // Add a small delay before removing the class
+                    setTimeout(() => {
+                        entry.target.classList.remove('in-view');
+                    }, 300);
+                }
+            });
+        }, {
+            // Element is considered in view when it's 30% visible
+            threshold: 0.3,
+            // Start observing when element is near the viewport
+            // Format: top right bottom left
+            rootMargin: '0px 0px -5% 0px'
+        });
+
+        // Observe all grayscale elements
+        grayscaleElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
 };
