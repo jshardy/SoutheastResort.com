@@ -4,3 +4,5 @@ package-lock.json
 dist/
 desktop.ini
 .DS_Store
+*.ps1
+images/

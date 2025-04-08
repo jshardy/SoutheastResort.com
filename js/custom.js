@@ -99,6 +99,7 @@ window.onload = function () {
         }
     });
 
+    // Close navbar when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function () {
             const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -109,18 +110,25 @@ window.onload = function () {
         });
     });
 
+    // Close navbar when clicking outside the menu area
+    document.addEventListener('click', function (event) {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        // Check if navbar is expanded and click is outside navbar
+        if (navbarCollapse && navbarCollapse.classList.contains('show') &&
+            !navbarCollapse.contains(event.target) &&
+            !navbarToggler.contains(event.target)) {
+
+            // Create a Bootstrap collapse instance and hide it
+            const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+            bootstrapCollapse.hide();
+        }
+    });
+
     // Initialize the Map
     var hotelCoords = [57.05119048303024, -135.3335];
-    var map = L.map('map_dialog').setView(hotelCoords, 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    L.marker(hotelCoords).addTo(map)
-        .bindPopup('Southeast Resort, formerly Westmark Alaska')
-        .openPopup();
-
-    var map1 = L.map('map_dialog', {
+    var map = L.map('map_dialog', {
         center: hotelCoords,
         zoom: 15,
         dragging: false,
@@ -132,4 +140,13 @@ window.onload = function () {
         touchZoom: false,
         tap: false
     });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker(hotelCoords).addTo(map)
+        .bindPopup('Southeast Resort, formerly Westmark Alaska')
+        .openPopup();
 };

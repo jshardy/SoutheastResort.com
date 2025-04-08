@@ -3,57 +3,89 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: auto;
-    padding: 5vw 0;
+    padding: clamp(0.5vw, 1vw, 2vw) 0;
+    /* Reduced padding */
     overflow: visible;
+    margin: 0 auto;
+    position: relative;
+    /* Add position relative */
 }
 
-.cta {
+.book-now-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 15px;
+    padding: clamp(8px, 2vw, 15px) clamp(15px, 4vw, 30px);
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     color: white;
     background: #018b32;
-    transition: 1s;
+    transition: 0.5s;
     box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
+    transform: skewX(-15deg) scale(.7);
     pointer-events: all;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+    /* Add space between text and arrows */
 }
 
-.cta:focus {
+.book-now-button:focus {
     outline: none;
 }
 
-.cta:hover {
+.book-now-button:hover {
     transition: 0.5s;
     box-shadow: 10px 10px 0 #FBC638;
 }
 
-.cta span {
+.book-now-button span {
     transform: skewX(15deg);
     display: inline-block;
 }
 
-.cta span:nth-child(2) {
-    width: 1vw;
-    margin-left: 1vw;
-    position: relative;
-    top: 12%;
-    transition: 0.5s;
+/* Specific styling for the book now text */
+.book-text {
+    white-space: nowrap;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    /* Center the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cta:hover span:nth-child(2) {
-    margin-right: 45px;
+.book-now-button span:nth-child(2) {
+    width: auto;
+    /* Remove margin to center properly */
+    margin-left: 0;
+    position: relative;
+    top: 0;
+    /* Align with text vertically */
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-now-button:hover span:nth-child(2) {
+    /* Remove margin adjustment on hover to maintain centering */
+    margin-right: 0;
 }
 
 /* SVG Arrow Styles */
+.arrow svg {
+    width: clamp(40px, 5vw, 66px);
+    height: auto;
+    display: block;
+}
+
 path.one,
 path.two,
 path.three {
@@ -71,16 +103,16 @@ path.two {
     transform: translateX(-30%);
 }
 
-.cta:hover path.three {
+.book-now-button:hover path.three {
     animation: color_anim 1s infinite 0.2s;
 }
 
-.cta:hover path.one {
+.book-now-button:hover path.one {
     transform: translateX(0%);
     animation: color_anim 1s infinite 0.6s;
 }
 
-.cta:hover path.two {
+.book-now-button:hover path.two {
     transform: translateX(0%);
     animation: color_anim 1s infinite 0.4s;
 }
@@ -110,23 +142,42 @@ path.two {
         animation: color_anim 1s infinite;
     }
 
-    .cta {
-        transform: scale(0.8);
+    .book-now-button {
+        /* Fix conflicting transforms by combining them */
+        transform: skewX(-15deg) scale(0.9);
         transform-origin: center;
-        transform: skewX(-15deg);
-        padding: 6px 80px;
+        /* Use responsive padding with clamp */
+        padding: clamp(5px, 2vw, 8px) clamp(20px, 8vw, 60px);
+        /* Reduce font size */
+        font-size: clamp(1.2rem, 4vw, 2rem);
         overflow: hidden;
-        /* Ensure arrows stay inside the button */
+    }
+
+    .wrapper {
+        padding: 1vw 0;
+        /* Reduced padding for mobile */
+        margin-bottom: 5px;
+        /* Add bottom margin */
     }
 
     span:nth-child(2) {
-        width: 10vw;
-        margin-left: 1vw;
+        width: auto;
+        margin-left: 0;
+        /* Remove margin for proper centering */
         position: relative;
         top: 0;
+        padding-right: 0;
+        /* Remove padding to maintain centering */
     }
 
-    .cta span {
+    /* Ensure the SVG container has enough space */
+    .arrow {
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .book-now-button span {
         transform: skewX(15deg);
     }
 }
@@ -140,24 +191,47 @@ path.two {
         animation: color_anim 1s infinite;
     }
 
-    .cta {
-        transform: scale(0.7);
-        transform-origin: center;
-        transform: skewX(-15deg);
-        padding: 4px 70px;
+    .book-now-button {
+        /* Fix conflicting transforms by combining them */
+        transform: skewX(-15deg) scale(0.8);
+        /* Use responsive padding with clamp for smaller screens */
+        padding: clamp(4px, 1.5vw, 6px) clamp(15px, 6vw, 40px);
+        /* Further reduce font size */
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
         overflow: hidden;
-        /* Ensure arrows stay inside the button */
+    }
+
+    .wrapper {
+        padding: 0.5vw 0;
+        /* Minimal padding for smallest screens */
+        margin-bottom: 5px;
+        /* Add bottom margin */
     }
 
     span:nth-child(2) {
-        width: 8vw;
-        margin-left: 0.5vw;
+        width: auto;
+        margin-left: 0;
+        /* Remove margin for proper centering */
         position: relative;
         top: 0;
+        padding-right: 0;
+        /* Remove padding to maintain centering */
     }
 
-    .cta span {
+    /* Ensure the SVG container has enough space */
+    .arrow {
+        min-width: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .book-now-button span {
         transform: skewX(15deg);
     }
 
+    /* Make the arrow smaller on very small screens */
+    .arrow svg {
+        width: clamp(30px, 10vw, 50px);
+        height: auto;
+    }
 }

@@ -18,7 +18,7 @@
 			  "@context": "https://schema.org",
 			  "@type": "Hotel",
 			  "name": "Southeast Resort",
-			  "image": "assets/images/hotel/southeastresort_lobby.jpg",
+			  "image": "https://SoutheastResort.com/images/logos/lounge_640x427.webp",
 			  "description": "Experience luxury at Southeast Resort Hotel in Sitka, Alaska. Stunning ocean views, premium amenities, and top-tier hospitality. (Formerly Westarmark Sitka Hotel).",
 			  "address": {
 				"@type": "PostalAddress",
@@ -57,17 +57,13 @@
   <!-- PACE.js -->
   <script data-pace-options='{ "eventLag": false }'
     src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <link rel="stylesheet" href="/css/loading-bar.css">
   <!-- Canonical Tag -->
   <link rel="canonical" href="https://SoutheastResort.com/">
-  <link rel="stylesheet" href="/css/loading-bar.css">
-  <!-- For Icon bar png -->
-  <link rel="shortcut icon" type="image/icon" href="/images/logos/icon.png">
   <!-- Poppins, Playfair, Lato fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Slick CSS -->
@@ -94,6 +90,7 @@
   <link rel="stylesheet" href="/css/defaults.css">
   <link rel="stylesheet" href="/css/neon_light.css">
   <link rel="stylesheet" href="/css/carousel.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -147,13 +144,19 @@
     <section id="hero" class="section pt-0">
       <div class="hero-carousel mx-auto">
         <div>
-          <img src="/images/hero/banner1.webp" alt="Slide 1">
+          <img src="/images/hero/banner1.webp" alt="Mountain image 1">
         </div>
         <div>
-          <img src="/images/hero/banner2.webp" alt="Slide 2">
+          <a href="https://baranofbackcountry.com/">
+            <h2 class="advertising">Photo: BaranofBackcountry.com</h2>
+          </a>
+          <img src="/images/hero/arial_view_baranof_backcountry.webp" alt="Baranof Backcountry image">
         </div>
         <div>
-          <img src="/images/hero/banner3.webp" alt="Slide 3">
+          <img src="/images/hero/banner2.webp" alt="Mountain image 2">
+        </div>
+        <div>
+          <img src="/images/hero/banner3.webp" alt="Sitka Sound image">
         </div>
       </div>
       <div class="hero-overlay">
@@ -168,7 +171,7 @@
           Book Now<span class="material-symbols-outlined">credit_card</span>
         </button> -->
           <div class="wrapper">
-            <a class="cta"
+            <a class="book-now-button"
               href="https://secure.webrez.com/Bookings105/record-edit.html?table=area&listing_id=165&area_id=165&mode=command&command=hotelrequestform_v2&hotel_id=3471&hotel_id=1880&hotel_id=3754">
               <span class="book-text">BOOK NOW</span>
               <span class="arrow">
@@ -222,73 +225,79 @@
 
     <!-- Rooms Section -->
     <section id="rooms" class="section pt-0">
-      <h2 class=" text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Rooms & Suites</h2>
-      <p class="text-center text-mutedcol-md-6 fs-5">
+      <h2 class="text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Rooms & Suites</h2>
+      <p class="text-center text-muted mx-auto col-md-8 col-lg-6 fs-5 mb-3">
         Experience the perfect blend of comfort and luxury in our newly renovated rooms and suites. Each room is
         designed to provide a relaxing retreat after a day of adventure in Sitka.
       </p>
-      <div id="rooms-carousel" class="carousel slide px-5" data-bs-ride="carousel" data-bs-theme="dark">
-        <div class="carousel-inner rounded">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/images/rooms/1.webp" class="d-block w-100" alt="...">
+      <div class="container-fluid px-md-5 px-3">
+        <div id="rooms-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="/images/rooms/1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/images/rooms/2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/rooms/3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="/images/rooms/4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/images/rooms/5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/rooms/6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="/images/rooms/7.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/images/rooms/8.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/rooms/9.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/rooms/10.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/rooms/11.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="/images/rooms/12.webp" class="d-block w-100" alt="...">
+            </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="/images/rooms/2.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/images/rooms/3.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/images/rooms/4.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="/images/rooms/5.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/images/rooms/6.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/images/rooms/7.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="/images/rooms/8.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/images/rooms/9.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/images/rooms/10.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/images/rooms/11.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/images/rooms/12.webp" class="d-block w-100" alt="...">
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#rooms-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#rooms-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#rooms-carousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#rooms-carousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
 
     <!-- Sights Section -->
     <section id="sights" class="section pt-0">
-      <div class="container py-2 col-md-6 fs-5">
-        <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Top Sights to See in Sitka,
-          Alaska</h2>
-        <p class="text-center text-mutedcol-md-6 fs-5">
-          Discover the rich history, natural beauty, and unique wildlife that make Sitka offers. These
-          are just a few of the many attractions that await you in this stunning Alaskan town.
-        </p>
+      <div class="container py-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-xl-6">
+            <h2 class="text-uppercase text-center stroke-text green-gradient-text fw-bold">Top Sights to See in Sitka,
+              Alaska</h2>
+            <p class="text-center text-muted fs-5 mb-4">
+              Discover the rich history, natural beauty, and unique wildlife that Sitka offers. These
+              are just a few of the many attractions that await you in this stunning Alaskan town.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="container col-md-6 fs-5">
-        <div class="row row-cols-1 row-cols-md-3 g-2">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
           <!-- Card 1 -->
           <div class="col">
             <div class="card h-100 image-card">

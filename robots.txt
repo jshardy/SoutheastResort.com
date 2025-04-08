@@ -1,0 +1,10 @@
+User-agent: *
+# Disallow: /wp-admin/
+# Disallow: /wp-login.php
+# Disallow: /xmlrpc.php
+
+# Allow everything else
+Allow: /
+
+# Sitemap location
+Sitemap: https://southeastresort.com/sitemap.xml
