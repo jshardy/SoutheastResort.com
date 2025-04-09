@@ -342,23 +342,6 @@ body {
   /* Slight lift effect on hover */
 }
 
-/* Advertising text styling */
-.advertising {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
-  background: var(--green-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.7);
-  animation: pulseGlow 2s ease-in-out infinite;
-  margin: 0;
-  white-space: nowrap;
-  transition: background-color 0.3s ease, text-shadow 0.3s ease;
-}
-
 .image-link-container:hover .advertising {
   background-color: rgba(0, 0, 0, 0.85);
   text-shadow: 0 0 10px rgba(0, 180, 15, 0.8), 0 0 15px rgba(0, 180, 15, 0.5);
@@ -386,7 +369,7 @@ body {
 }
 
 .backcountry {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 0.5vw, 1.5rem);
   background: var(--green-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -397,6 +380,27 @@ body {
 .backcountry:hover {
   transition: all 0.3s ease;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.6), 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Image container for sights section */
+#sights .img-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+#sights .card-img-top {
+  max-height: 180px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 #map_dialog {

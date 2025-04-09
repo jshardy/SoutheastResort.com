@@ -25,9 +25,15 @@ window.onload = function () {
                 event.preventDefault();
                 const target = document.querySelector(this.hash);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth', // Enables smooth scrolling
-                        block: 'start' // Aligns the target to the top of the viewport
+                    // Get the target's position
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                    // Subtract 10 pixels from the target position
+                    const offsetPosition = targetPosition - 100;
+
+                    // Scroll to the adjusted position
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             }
@@ -131,13 +137,13 @@ window.onload = function () {
     var map = L.map('map_dialog', {
         center: hotelCoords,
         zoom: 15,
-        dragging: false,
-        zoomControl: false,
-        scrollWheelZoom: false,
-        doubleClickZoom: false,
+        dragging: true,
+        zoomControl: true,
+        scrollWheelZoom: true,
+        doubleClickZoom: true,
         boxZoom: false,
         keyboard: false,
-        touchZoom: false,
+        touchZoom: true,
         tap: false
     });
 
@@ -147,7 +153,7 @@ window.onload = function () {
     }).addTo(map);
 
     L.marker(hotelCoords).addTo(map)
-        .bindPopup('Southeast Resort, formerly Westmark Alaska')
+        .bindPopup('Southeast Resort, formerly Westmark Sitka')
         .openPopup();
 
     // Handle grayscale elements on touch devices
