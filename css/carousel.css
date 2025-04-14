@@ -6,7 +6,7 @@
 }
 
 /* Rooms carousel specific styling */
-#rooms-carousel {
+.x-carousel {
     max-height: 80vh;
     max-width: 1920px;
     /* Limit height to 80% of viewport height */
@@ -14,17 +14,17 @@
     overflow: hidden;
 }
 
-#rooms-carousel .carousel-inner {
+.x-carousel .carousel-inner {
     max-height: 80vh;
     border-radius: var(--corner-radius);
 }
 
-#rooms-carousel .carousel-item {
+.x-carousel .carousel-item {
     height: auto;
     max-height: 80vh;
 }
 
-#rooms-carousel .carousel-item img {
+.x-carousel .carousel-item img {
     width: 100%;
     height: auto;
     max-height: 80vh;

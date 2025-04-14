@@ -82,14 +82,24 @@
   <!-- leaflet map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/styles.css?v=1.1">
-  <link rel="stylesheet" href="/css/custom_button.css?v=1.0">
-  <link rel="stylesheet" href="/css/device_screens.css?v=1.1">
-  <link rel="stylesheet" href="/css/defaults.css?v=1.1">
-  <link rel="stylesheet" href="/css/neon_light.css?v=1.0">
-  <link rel="stylesheet" href="/css/carousel.css?v=1.0">
+  <link rel="stylesheet" href="/css/styles.css?v=1.3">
+  <link rel="stylesheet" href="/css/custom_button.css?v=1.3">
+  <link rel="stylesheet" href="/css/device_screens.css?v=1.3">
+  <link rel="stylesheet" href="/css/defaults.css?v=1.3">
+  <link rel="stylesheet" href="/css/neon_light.css?v=1.2">
+  <link rel="stylesheet" href="/css/carousel.css?v=1.2">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHZK23HJ49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-KHZK23HJ49');
+</script>
 
 <body>
   <!--[if lte IE 9]>
@@ -215,6 +225,63 @@
     </section>
     <!-- About End -->
 
+    <!-- Restaurant Section -->
+    <section id="restaurant" class="section pt-0">
+      <h2 class="text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Restaurant and Bar</h2>
+      <p class="text-center text-muted mx-auto col-md-8 col-lg-6 fs-5 mb-3">
+        Unwind in our elegant restaurant or savor a moment of tranquility at the bar, where comfort and great company
+        await.
+      </p>
+      <div class="container-fluid px-md-5 px-3">
+        <div id="restaurant-carousel" class="x-carousel carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="/images/restaurant/food_beer1.webp" class="d-block w-100" alt="Food and Beer">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/Restaurant_server.webp" class="d-block w-100" alt="Restaurant server">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/bar2.webp" class="d-block w-100" alt="Bar and lounge">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/bar3.webp" class="d-block w-100" alt="Bar and lounge">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/southeast_entrance_logo.webp" class="d-block w-100"
+                alt="Southeast Resort Welcome Sign">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/Restaurant4.webp" class="d-block w-100" alt="Restraunt picture">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/Restaurant3.webp" class="d-block w-100" alt="Restraunt picture">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/Restaurant2.webp" class="d-block w-100" alt="Restraunt picture">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/restaurant/Restaurant1.webp" class="d-block w-100" alt="Restraunt picture">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/" class="d-block w-100" alt="Restraunt picture">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#restaurant-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#restaurant-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End Restaurant -->
+
     <!-- Rooms Section -->
     <section id="rooms" class="section pt-0">
       <h2 class="text-uppercase text-center py-2 stroke-text fw-bold green-gradient-text">Rooms & Suites</h2>
@@ -223,30 +290,30 @@
         designed to provide a relaxing retreat after a day of adventure in Sitka.
       </p>
       <div class="container-fluid px-md-5 px-3">
-        <div id="rooms-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+        <div id="rooms-carousel" class="x-carousel carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
           <div class="carousel-inner rounded">
-            <div class="carousel-item active" data-bs-interval="10000">
+            <div class="carousel-item active">
               <img src="/images/rooms/1.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item">
               <img src="/images/rooms/2.webp" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
               <img src="/images/rooms/3.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
+            <div class="carousel-item">
               <img src="/images/rooms/4.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item">
               <img src="/images/rooms/5.webp" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
               <img src="/images/rooms/6.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
+            <div class="carousel-item">
               <img src="/images/rooms/7.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item">
               <img src="/images/rooms/8.webp" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
@@ -258,7 +325,7 @@
             <div class="carousel-item">
               <img src="/images/rooms/11.webp" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
+            <div class="carousel-item">
               <img src="/images/rooms/12.webp" class="d-block w-100" alt="...">
             </div>
           </div>
@@ -440,12 +507,6 @@
         <div id="map_dialog" aria-label="Map of Southeast Resort">
         </div>
       </div>
-    </section>
-
-    <section id="google-map" class="section pt-0">
-      <iframe
-        src="https://www.google.com/maps/embed/v1/place?q=330+Seward+St%2C+Sitka%2C+AK+99835&amp;key=AIzaSyD09zQ9PNDNNy9TadMuzRV_UsPUoWKntt8"
-        aria-hidden="true" style="pointer-events: auto;"></iframe>
     </section>
 
     <!-- Hotels Sec -->

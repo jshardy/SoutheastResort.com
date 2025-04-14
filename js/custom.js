@@ -1,8 +1,5 @@
-// Custom Scripts
-
-window.onload = function () {
-    "use strict";
-
+// Images and other downloaded content may not be available
+document.addEventListener('DOMContentLoaded', function () {
     // Shows all other content once Pace.js is done
     Pace.on('done', function () {
         const content = document.getElementById('content');
@@ -17,6 +14,11 @@ window.onload = function () {
             preloader.style.opacity = 0; // Hide preloader
         }
     });
+});
+
+// Everything is loaded
+window.onload = function () {
+    "use strict";
 
     // Smooth scrolling for anchor links using scrollIntoView
     document.querySelectorAll('a.nav-link').forEach(link => {
@@ -61,7 +63,15 @@ window.onload = function () {
     const roomsCarousel = document.getElementById('rooms-carousel');
     if (roomsCarousel) {
         new bootstrap.Carousel(roomsCarousel, {
-            interval: 2000, // Auto-slide every 2 seconds
+            interval: 2500, // Auto-slide every 2 seconds
+            touch: true // Enable touch gestures
+        });
+    }
+
+    const restaurantCarousel = document.getElementById('restaurant-carousel');
+    if (restaurantCarousel) {
+        new bootstrap.Carousel(restaurantCarousel, {
+            interval: 2500, // Auto-slide every 2 seconds
             touch: true // Enable touch gestures
         });
     }
