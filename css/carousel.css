@@ -45,7 +45,7 @@
     width: clamp(2rem, 5vw, 3rem);
     height: clamp(2rem, 5vw, 3rem);
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;

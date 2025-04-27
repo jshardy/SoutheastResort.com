@@ -14,6 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
             preloader.style.opacity = 0; // Hide preloader
         }
     });
+
+    // Load events with improved performance
+    const eventsContainer = document.getElementById('events-container');
+    if (eventsContainer) {
+        // Show loading indicator
+        eventsContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+
+        // Delay fetch slightly to prioritize critical content
+        setTimeout(() => {
+            fetch('events/embeddedEventsSimple.php?theme=light')
+                .then(response => response.text())
+                .then(html => {
+                    eventsContainer.innerHTML = html;
+                })
+                .catch(error => {
+                    eventsContainer.innerHTML =
+                        '<div class="alert alert-danger">Error loading events. Please try again later.</div>';
+                    console.error('Error loading events:', error);
+                });
+        }, 300); // Short delay to prioritize other content
+    }
 });
 
 // Everything is loaded
@@ -27,12 +48,11 @@ window.onload = function () {
                 event.preventDefault();
                 const target = document.querySelector(this.hash);
                 if (target) {
-                    // Get the target's position
                     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                    // Subtract 10 pixels from the target position
-                    const offsetPosition = targetPosition - 100;
+                    const isMobile = window.innerWidth <= 768;
+                    const offset = isMobile ? 315 : 100;
+                    const offsetPosition = targetPosition - offset;
 
-                    // Scroll to the adjusted position
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
@@ -55,7 +75,8 @@ window.onload = function () {
             swipeToSlide: true,
             useCSS: true,
             useTransform: true,
-            lazyLoad: 'progressive'
+            lazyLoad: 'ondemand',
+            accessibility: false
         });
     }
 

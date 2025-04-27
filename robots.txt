@@ -2,6 +2,7 @@ User-agent: *
 # Disallow: /wp-admin/
 # Disallow: /wp-login.php
 # Disallow: /xmlrpc.php
+Disallow: /events/
 
 # Allow everything else
 Allow: /
