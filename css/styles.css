@@ -95,7 +95,7 @@ body {
 
 /* Southeast Resort Name in top left */
 .southeast {
-  background: var(--black-gradient-hover);
+background: var(--black-gradient-hover);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -293,6 +293,11 @@ body {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--main-color);
+}
+
+#sights .card-body {
+  display: flex;
+  justify-content: flex-end;
 }
 
 #sights .card-text {
