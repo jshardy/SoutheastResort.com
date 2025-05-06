@@ -5,7 +5,8 @@ User-agent: *
 Disallow: /events/
 
 # Allow everything else
-Allow: /
+Allow: /favicon.ico
+Allow: favicon.ico
 
 # Sitemap location
 Sitemap: https://southeastresort.com/sitemap.xml

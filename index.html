@@ -19,8 +19,9 @@
 			{
 			  "@context": "https://schema.org",
 			  "@type": "Hotel",
-			  "name": "Southeast Resort",
-			  "image": "https://SoutheastResort.com/images/logos/lounge_640x427.webp",
+			  "name": "Southeast Resort | Sitka, Alaska",
+			  "image": "https://SoutheastResort.com/images/logos/lounge_640x427.png",
+        "url": "https://SoutheastResort.com/",
 			  "description": "Experience luxury at Southeast Resort Hotel in Sitka, Alaska. Stunning ocean views, premium amenities, and top-tier hospitality. (Formerly Westarmark Sitka).",
 			  "address": {
 				"@type": "PostalAddress",
@@ -30,21 +31,41 @@
 				"postalCode": "99835",
 				"addressCountry": "US"
 			  },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "57.05119048303024",
+          "longitude": "-135.3335"
+        },
 			  "telephone": "907-747-6241",
 			  "priceRange": "$$",
-			  "amenityFeature": [
-				{
-				  "@type": "LocationFeatureSpecification",
-				  "name": "Restaurant",
-				  "value": true
-				},
-				{
-				  "@type": "LocationFeatureSpecification",
-				  "name": "Ocean View",
-				  "value": true
-				}
-
-			  ]
+        "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Restaurant",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Ocean View",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free Wifi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Parking",
+          "value": true
+        }
+        ],
+        "hasRestaurant": {
+          "@type": "Restaurant",
+          "name": "Coldwater Bar & Grill",
+          "servesCuisine": "Seafood, Alaskan Cuisine",
+          "priceRange": "$$-$$$"
+        }
 			}
 			</script>
 
@@ -91,7 +112,7 @@
   <link rel="stylesheet" href="/css/neon_light.css?v=1.4">
   <link rel="stylesheet" href="/css/carousel.css?v=1.4">
   <link rel="stylesheet" href="/css/water_text.css?v=1.00">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico">
 </head>
 
 <!-- Google tag (gtag.js) -->
