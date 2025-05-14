@@ -7,6 +7,7 @@ Disallow: /events/
 # Allow everything else
 Allow: /favicon.ico
 Allow: favicon.ico
+Allow: /restaurant/
 
 # Sitemap location
 Sitemap: https://southeastresort.com/sitemap.xml
