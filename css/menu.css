@@ -177,9 +177,40 @@
     display: block;
 }
 
+.phone-number {
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 1.3rem;
+    background: linear-gradient(to right, #00a040, #13bb5f, #00d142);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 8px rgba(0, 180, 15, 0.82);
+    transition: text-shadow 0.3s ease;
+}
+
+.phone-number a {
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.82);
+    border-style: dotted;
+    padding: 5px 10px;
+}
+
+.phone-number a:hover {
+    text-shadow: 3px 3px 20px rgb(0, 180, 15);
+    border-style: solid;
+}
+
 @media (max-width: 768px) {
     .menu-header {
         flex-direction: column;
+        order: 2;
+        /* Change the order to appear after phone number */
     }
 
     .special-offer {
@@ -189,5 +220,23 @@
 
     .menu-column {
         min-width: 100%;
+    }
+
+    /* Reorder elements in the container */
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone-number {
+        order: 1;
+        /* Make phone number appear first */
+        margin-bottom: 0px;
+        margin-top: 7px;
+    }
+
+    /* Ensure the rest of the content follows */
+    .menu-content {
+        order: 3;
     }
 }
